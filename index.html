@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Food Delivery</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div class="overlay" id="overlay">
+        <h3>Searching now...</h3>
+    </div>
+    <div class="navbar">
+        <div class="container">
+            <a class="logo" href="#"><span>Quick.</span>Foods</a>
+
+            <img id="mobile-cta" class="mobile-menu" src="images/menu.svg" alt="Menu button">
+
+            <nav>
+                <img id="mobile-exit" class="mobile-menu-exit" src="images/exit.svg" alt="Menu Exit">
+
+                <ul class="primary-nav">
+                    <li><a class="current" href="#">Home</a></li>
+                    <li><a href="#">Delivery</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+
+                <ul class="secondary-nav">
+                    <li><a href="#">Contact</a></li>
+                    <li class="sign-up-cta"><a href="#">Sign Up</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <section class="hero">
+        <div class="container">
+            <div class="left-col">
+                <p class="subhead">It's Fast &amp; Easy</p>
+                <h3><span>Quick</span> Food <span>Delivery</span> at Your Fingertips</h3>
+            </div>
+
+            <img src="images/mainpic.jpg" alt="Delivery" class="hero-img">
+        </div>
+
+        <div class="form-container">
+            <form action="">
+                <div class="form-left">
+                    <label for="food">Place Your Order:</label>
+                    <input type="text" name="food" id="food">
+                    <p>Example: "Sharwama"</p>
+                </div>
+
+                <input type="button" value="Find Food Now!" id="cta-btn">
+            </form>
+        </div>
+    </section>
+
+    <section class="steps-section">
+        <div class="container">
+            <ul>
+                <li>
+                    <img src="images/order1.png" alt="Order">
+
+                    <blockquote>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum obcaecati quidem facere, magni qui magnam voluptatum corporis explicabo excepturi architecto.</blockquote>
+                </li>
+                <li>
+                    <img src="images/deliver1.png" alt="deliver">
+
+                    <blockquote>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum obcaecati quidem facere, magni qui magnam voluptatum corporis explicabo excepturi architecto.</blockquote>
+                </li>
+                <li>
+                    <img src="images/collect1.jpg" alt="Collect">
+
+                    <blockquote>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum obcaecati quidem facere, magni qui magnam voluptatum corporis explicabo excepturi architecto.</blockquote>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <script>
+        // mobile navigation
+        const mobileBtn = document.getElementById('mobile-cta')
+            nav = document.querySelector('nav')
+            mobileBtnExit = document.getElementById('mobile-exit');
+
+        mobileBtn.addEventListener('click', () => {
+            nav.classList.add('menu-btn');
+        });
+
+        mobileBtnExit.addEventListener('click', () => {
+            nav.classList.remove('menu-btn');
+        });
+
+        // Search
+        let btn = document.getElementById('cta-btn');
+        let overlay = document.getElementById('overlay');
+
+        btn.addEventListener('click', () => {
+            overlay.style.display = 'grid';
+            overlay.classList.add('animate-overlay')
+        });
+
+    </script>
+</body>
+</html>
